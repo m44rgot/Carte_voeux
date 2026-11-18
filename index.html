@@ -5,7 +5,7 @@
   <!-- A short and witty title does the trick -->
   <title>AR Example with Aframe and MindAR</title>
   <!-- Import Scripts for Aframe, mind-ar and Aframe extras for animation -->
-  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.0/dist/aframe-extras.min.js"></script>
 
@@ -13,7 +13,7 @@
 <body>
     <!-- Create a Scene and identify the image target -->
     <a-scene
-    mindar-image="imageTargetSrc: ./ARtargetImage.mind; maxTrack: 1 filterMinCF:0.001; filterBeta:30; missTolerance:30;" 
+    mindar-image="imageTargetSrc: ./ARtargetImage.mind; maxTrack: 1; filterMinCF:0.001; filterBeta:30; missTolerance:30;"
     color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" 
     device-orientation-permission-ui="enabled: false" 
     vr-mode-ui="enabled: false"
@@ -21,7 +21,7 @@
     >
         <!-- Load an asset - GLTF Model -->
         <a-assets>
-        <a-asset-item id="Planet" response-type="arraybuffer" src=".\Little_Planet.glb"></a-asset-item>
+        <a-asset-item id="Planet" response-type="arraybuffer" src="./Little_Planet.glb"></a-asset-item>
         </a-assets>
         
         <!-- Add a camera -->
